@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {setupMockServer} from "./api/server";
+import { DataProvider } from './context/dataContext';
 
 setupMockServer()
 
 ReactDOM.render(
   <React.StrictMode>
+  <DataProvider>
     <App />
+  </DataProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
